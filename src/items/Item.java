@@ -54,11 +54,11 @@ public class Item implements Serializable {
 	}
 
 	public int getStockQuantity() {
-		return this.stockQuantity.get();
+		return stockQuantity.get();
 	}
 
 	public void setStockQuantity(int quantity) {
-		this.stockQuantity.set(quantity);
+		stockQuantity.set(stockQuantity.get() + quantity);
 	}
 
 	public int decStockQuantity(int offset) {
@@ -93,5 +93,11 @@ public class Item implements Serializable {
 
 	public String getImagePath() {
 		return imagePath;
+	}
+
+	public void resetQuantityStock() {
+		
+		stockQuantity.set(1);
+		
 	}
 }
