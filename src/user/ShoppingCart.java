@@ -3,12 +3,16 @@ package user;
 import items.Item;
 
 import java.util.Collection;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ShoppingCart {
 	private ConcurrentHashMap<String, Item> items = new ConcurrentHashMap<String, Item>();
 
 	public void addItem(Item item) {
+		if(items.containsKey(item.getItemId())){
+			item.setStockQuantity(1);
+		}
 		items.putIfAbsent(item.getItemId(), item);
 	}
 
@@ -16,7 +20,17 @@ public class ShoppingCart {
 		items.remove(itemId);
 	}
 	
+	public void resetQuantityChart(){
+		
+         for (Entry<String, Item> e : items.entrySet() ){
+			
+		    Item item = e.getValue();
+		    item.resetQuantityStock();
+		}
+	}
+	
 	public void removeAllItems() {
+		resetQuantityChart();
 		items.clear();
 	}
 
@@ -40,20 +54,28 @@ public class ShoppingCart {
 
 		double price = 0.0;
 		for (Item i : this.items.values()) {
-			price += i.getPrice();
+			price += i.getPrice() * i.getStockQuantity();
 		}
 		return price;
 	}
 
 	public int getNumOfItems() {
-		return this.items.size();
+		
+		int quantity = 0;
+		
+		for (Entry<String, Item> e : items.entrySet() ){
+			
+		    Item item = e.getValue();
+		    quantity = quantity + item.getStockQuantity();
+		}
+		return quantity;
 	}
 
 	public int getNumberOfItems(String ID) {
 		Item temp = this.items.get(ID);
 		if (temp == null)
 			return 0;
-		return 1;
+		return temp.getStockQuantity();
 	}
 
 	public String toString() {

@@ -74,7 +74,7 @@
 	</div>
 	
 	<div class="callout large secondary">
-		<h5> Thnaks for shoping with us!</h5>
+		<h5> Thanks for shoping with us!</h5>
 	</div>
 </body>
 </html>
