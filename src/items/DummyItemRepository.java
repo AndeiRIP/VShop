@@ -16,7 +16,7 @@ public class DummyItemRepository implements ItemRepository {
 		temp.addComments(new Comment("ass", "zzzzzzzzzzzzzzzzzzzzzzzz"));
 		temp.addComments(new Comment("ass", "aaaaaaaaaaaaaaaaaaaaaaaa"));
 		this.items.put("1", temp);
-		
+		 
 		temp = new Item("2", "Sony PSP", "Gaming stuff2", "images/sony_psp.jpg", 190,
 				1);
 		temp.addComments(new Comment("ion", "lalal, load of crap"));
