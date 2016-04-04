@@ -46,7 +46,7 @@ public class Item implements Serializable {
 	}
 
 	public double getPrice() {
-		return price;
+		return price ;
 	}
 
 	public void setPrice(float price) {

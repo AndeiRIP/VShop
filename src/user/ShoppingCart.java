@@ -54,7 +54,7 @@ public class ShoppingCart {
 
 		double price = 0.0;
 		for (Item i : this.items.values()) {
-			price += i.getPrice();
+			price += i.getPrice() * i.getStockQuantity();
 		}
 		return price;
 	}
