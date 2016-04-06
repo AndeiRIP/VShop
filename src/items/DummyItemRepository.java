@@ -26,7 +26,7 @@ public class DummyItemRepository implements ItemRepository {
 				"images/carkit.jpg", 199, 1));
 		
 		this.items.put("4", new Item("4", "Mouse", "Accesorii",
-				"images/moue.jpg", 349, 1));
+				"images/mouse.jpg", 349, 1));
 		
 		this.items.put("5", new Item("5", "Tab Yoga 3 Pro", "Tablete",
 				"images/tableta.jpg", 2699, 1));
