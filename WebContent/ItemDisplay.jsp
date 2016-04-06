@@ -8,13 +8,35 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title><%=it.getName()%></title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+	<title><%=it.getName()%></title>
 </head>
 <body>
-	<%=it.getName()%>
-	<img src="<%=it.getImagePath()%>" />
-	<%=it.getDesc()%>
+
+	<div class="top-bar">
+		<div class="top-bar-right">
+			<a href="logout.jsp">Logout :: <%=session.getAttribute("username")%></a>
+		</div>
+	</div>
+
+	<hr>
+	<div class="row column text-center">
+		<h2><%=it.getName() %></h2>
+		<hr>
+	</div>
+
+	<div style="align:left">
+		Name::<%=it.getName() %><br>
+		Description::<%=it.getDesc() %><br>
+		Price::<%=it.getPrice() %>
+	</div>
+	
+	<div style="align:right">
+		<img src="<%=it.getImagePath()%>" />
+	</div>
+	
 	<textarea name="commentArea" rows="10" cols="20"></textarea>
 	<ul>
 		<%
@@ -24,6 +46,10 @@
 			}
 		%>
 	</ul>
+	
+	<div class="callout large secondary">
+		<h5> Thanks for shoping with us!</h5>
+	</div>
 
 </body>
 </html>
