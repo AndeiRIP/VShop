@@ -11,25 +11,25 @@ public class DummyItemRepository implements ItemRepository {
 
 	DummyItemRepository() {
 		
-		Item temp = new Item("1", "Nintendo LALA", "Gaming stuff",
-				"images/nintendo.jpg", 170, 1);
-		temp.addComments(new Comment("ass", "zzzzzzzzzzzzzzzzzzzzzzzz"));
-		temp.addComments(new Comment("ass", "aaaaaaaaaaaaaaaaaaaaaaaa"));
+		Item temp = new Item("1", "Folie", "Accesorii",
+				"images/folie.jpg", 69, 1);
+		temp.addComments(new Comment("gigi", "bla"));
+		temp.addComments(new Comment("kat", "nu ca bla"));
 		this.items.put("1", temp);
 		 
-		temp = new Item("2", "Sony PSP", "Gaming stuff2", "images/sony_psp.jpg", 190,
+		temp = new Item("2", "LG Nexus", "Smart Phone", "images/nexus.jpg", 1504,
 				1);
-		temp.addComments(new Comment("ion", "lalal, load of crap"));
+		temp.addComments(new Comment("nic", "de ce am cumparat IPhone?"));
 		this.items.put("2", temp);
 		
-		this.items.put("3", new Item("3", "Apple IPAD", "Multistuff",
-				"images/ipad.jpg", 290, 1));
+		this.items.put("3", new Item("3", "Car Kit Bluetooth", "Accesorii",
+				"images/carkit.jpg", 199, 1));
 		
-		this.items.put("4", new Item("4", "Laptop Sleeve", "sleeve",
-				"images/laptop_sleeve.jpg", 100, 1));
+		this.items.put("4", new Item("4", "Mouse", "Accesorii",
+				"images/moue.jpg", 349, 1));
 		
-		this.items.put("5", new Item("5", "Cup Warmer", "misc",
-				"images/usb_cup_warmer.jpg", 120, 1));
+		this.items.put("5", new Item("5", "Tab Yoga 3 Pro", "Tablete",
+				"images/tableta.jpg", 2699, 1));
 	}
 
 	public void writeToFile() {
